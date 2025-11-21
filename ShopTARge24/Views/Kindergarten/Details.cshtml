@@ -1,0 +1,71 @@
+﻿@model ShopTARge24.Models.Kindergarten.KindergartenDetailsViewModel
+
+<h1>Details</h1>
+
+<div>
+    <h4>Kindergarten</h4>
+    <hr />
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="Id" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Id)
+        </div>
+    </dl>
+
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="KindergartenName" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.KindergartenName)
+        </div>
+    </dl>
+
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="GroupName" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.GroupName)
+        </div>
+    </dl>
+
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="TeacherName" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.TeacherName)
+        </div>
+    </dl>
+
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="ChildrenCount" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.ChildrenCount)
+        </div>
+    </dl>
+
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="CreatedAt" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </div>
+    </dl>
+
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="UpdatedAt" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.UpdatedAt)
+        </div>
+    </dl>
+
+
+    <div class="row">
+        @foreach (var image in Model.Images)
+        {
+            <div class="col-md-3 text-center mb-3">
+                <div>@image.ImageTitle</div>
+                <img src="@image.Image" class="img-fluid card-img-top" alt="@image.ImageTitle" />
+            </div>
+        }
+    </div>
+
+    <hr />
+    <a asp-action="Index" asp-controller="Kindergarten" class="btn btn-danger">Back</a>
+</div>
+
