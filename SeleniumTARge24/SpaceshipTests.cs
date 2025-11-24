@@ -23,6 +23,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(1)]
         public void NavigateToSpaceships()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Spaceships");
@@ -31,6 +32,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(2)]
         public void AddSpaceship_ValidData()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Spaceships/Create");
@@ -48,6 +50,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(3)]
         public void AddSpaceship_InvalidData()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Spaceships/Create");
@@ -65,6 +68,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(4)]
         public void EditSpaceship_Valid()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Spaceships");
@@ -83,6 +87,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(5)]
         public void EditSpaceship_Invalid()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Spaceships");
@@ -103,6 +108,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(6)]
         public void DeleteSpaceship()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Spaceships");

@@ -26,6 +26,7 @@ namespace SeleniumTARge24
 
 
         [Test]
+        [Order(1)]
         public void NavigateToKindergarten()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten");
@@ -34,6 +35,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(2)]
         public void AddKindergarten_ValidData()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten/create");
@@ -50,6 +52,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(3)]
         public void AddKindergarten_InvalidData()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten");
@@ -70,6 +73,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(4)]
         public void ViewKindergartenDetails()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten");
@@ -82,6 +86,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(5)]
         public void EditKindergarten_Valid()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten");
@@ -100,6 +105,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(6)]
         public void EditKindergarten_Invalid()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten");
@@ -120,6 +126,7 @@ namespace SeleniumTARge24
         }
 
         [Test]
+        [Order(7)]
         public void DeleteKindergarten()
         {
             driver.Navigate().GoToUrl("http://localhost:5196/Kindergarten");
